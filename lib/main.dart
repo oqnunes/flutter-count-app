@@ -27,14 +27,25 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar:
         AppBar(
-          title: const Text("Title"), 
+          title: const Text("Count App"), 
           backgroundColor: Colors.orange
         ),
       body: Center(
-        child: Text(
-          "Hello World\n$count", 
-          textAlign: TextAlign.center
-        )
+        child: Column(
+          children: [
+             const Text(
+              "Count", 
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 32, height: 4),
+              
+            ),
+             Text(
+              "$count", 
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontSize: 32, height: 4),
+            ),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
